@@ -26,7 +26,7 @@ const posts = ref([]);
 const loading = ref(false);
 const error = ref(null);
 //const graphqlEndpoint = 'http://localhost:3000/api/graphql';
-const graphqlEndpoint = import.meta.env.VUE_APP_API_URL + '/api/graphql';
+const graphqlEndpoint = process.env.VUE_APP_API_URL + '/api/graphql';
 const getFilteredContent = (documentArray) => {
   return documentArray.filter(
     (item) => item.type === 'paragraph' && item.children && item.children.length > 0
