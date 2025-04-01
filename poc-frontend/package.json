@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "vue-cli-service serve",
+    "start": "serve -s dist -p $PORT",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
