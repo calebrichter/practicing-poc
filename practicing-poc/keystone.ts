@@ -25,7 +25,7 @@ export default withAuth(
     session,
     server: {
       cors: {
-        origin: ['http://localhost:8080'],
+        origin: [process.env.CLIENT_APP_URL],
         credentials: false,
       },
     },
