@@ -75,13 +75,13 @@ onMounted(async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const responsejson = await response.json();
+    const responseJson = await response.json();
 
-    if (responsejson.errors) {
-      console.error('GraphQL Errors:', responsejson.errors);
+    if (responseJson.errors) {
+      console.error('GraphQL Errors:', responseJson.errors);
       error.value = 'Failed to load sermons due to GraphQL errors.';
-    } else if (responsejson.data && responsejson.data.sermons) {
-      sermons.value = responsejson.data.sermons;
+    } else if (responseJson.data && responseJson.data.sermons) {
+      sermons.value = responseJson.data.sermons;
     } else {
       error.value = 'Failed to load sermons - unexpected data structure.';
     }
